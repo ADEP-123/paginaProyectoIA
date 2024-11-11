@@ -412,3 +412,91 @@ products-view .scroll-button {
 products-view .scroll-button:hover {
   background-color: #c99e13;
 }
+
+/* ------ contact-us ------ */
+contact-view .contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  height: 94%;
+  width: 100%;
+  gap: 5%;
+}
+
+contact-view .contact-header {
+  width: 100%;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+contact-view .contact-info {
+  flex-direction: column;
+  width: 100%;
+}
+
+contact-view .contact-info div {
+  font-size: 18px;
+  color: #8a8989;
+}
+
+contact-view .contact-info div i {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+contact-view .social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  width: 100%;
+}
+
+contact-view .social-buttons a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+contact-view .whatsapp {
+  background-color: #25D366;
+}
+
+contact-view .whatsapp:hover {
+  background-color: #1DA851;
+}
+
+contact-view .twitter {
+  background-color: #1DA1F2;
+}
+
+contact-view .twitter:hover {
+  background-color: #1A91DA;
+}
+
+contact-view .facebook {
+  background-color: #4267B2;
+}
+
+contact-view .facebook:hover {
+  background-color: #365899;
+}
+
+contact-view .instagram {
+  background-color: #E1306C;
+}
+
+contact-view.instagram:hover {
+  background-color: #C13584;
+}

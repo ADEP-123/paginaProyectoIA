@@ -2,7 +2,8 @@ import './components/start-view.js';
 import './components/home-view.js';
 import './components/navbar.js';
 import './components/acerca-de-nosotros.js';
-import './components/products.view.js';
+import './components/products-view.js';
+import './components/contact-view.js';
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -11,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const homeView = document.createElement("home-view");
   const aboutUsView = document.createElement("about-us")
   const productsView = document.createElement("products-view")
+  const contactView = document.createElement("contact-view")
 
   function showHomePage() {
     document.body.innerHTML = "";
@@ -39,6 +41,14 @@ document.addEventListener("DOMContentLoaded", () => {
     changeSelectedNavButton("app-btn")
   }
 
+  function showContactsPhone(){
+    document.body.innerHTML = "";
+    document.body.appendChild(navbar);
+    addNavBarEvents()
+    document.body.appendChild(contactView);
+    changeSelectedNavButton("phone-btn")
+  }
+
   function changeSelectedNavButton(newButton) {
       navbar.querySelector(`.${newButton}`).classList.add("navSelected");
   }
@@ -55,6 +65,10 @@ document.addEventListener("DOMContentLoaded", () => {
       
       navbar.querySelector(".app-btn").addEventListener("click", () => {
         showProductsPage()
+      });
+
+      navbar.querySelector(".phone-btn").addEventListener("click", () => {
+        showContactsPhone()
       });
   }
 
