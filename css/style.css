@@ -250,7 +250,7 @@ about-us img {
 }
 about-us h1{
   text-align: center;
-  margin-bottom: 2%;
+  margin-bottom: 5%;
   font-size: 2.5em;
 }
 
@@ -304,4 +304,109 @@ about-us #services:hover {
 about-us #services:active {
     transform: translateY(1px); 
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ------ products view ------ */
+
+products-view h1{
+  font-size: 4vw;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+products-view .products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  height: 84%;
+}
+              
+/* Estilos de cada tarjeta de producto */
+products-view .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 600px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 20px;
+    height: 95%;
+}
+
+products-view .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+              
+products-view .product-card img {
+    width: 100%;
+    height: auto;
+}
+
+products-view .product-description {
+    padding: 15px;
+    text-align: center;
+}
+
+products-view .product-description h2 {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+}
+
+products-view .product-description p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+products-view .payment-plans {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    justify-content: center;
+}
+
+products-view .plan-button {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: white;
+    background-color: #a88512;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+products-view .plan-button:hover {
+    background-color: #c99e13;
+}
+
+/* Flechas de desplazamiento */
+products-view .scroll-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #a88512;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+products-view .scroll-button:hover {
+  background-color: #c99e13;
 }

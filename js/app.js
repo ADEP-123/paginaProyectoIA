@@ -2,6 +2,7 @@ import './components/start-view.js';
 import './components/home-view.js';
 import './components/navbar.js';
 import './components/acerca-de-nosotros.js';
+import './components/products.view.js';
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -9,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.createElement("nav-bar")
   const homeView = document.createElement("home-view");
   const aboutUsView = document.createElement("about-us")
+  const productsView = document.createElement("products-view")
 
   function showHomePage() {
     document.body.innerHTML = "";
@@ -24,10 +26,17 @@ document.addEventListener("DOMContentLoaded", () => {
     addNavBarEvents()
     document.body.appendChild(aboutUsView);
     changeSelectedNavButton("question-btn")
-    aboutUsView.querySelector("#services").addEventListener("click",()=>{
-      console.log("mostrarPaginaDeProductos");     
-      // showProductsPage()
+    aboutUsView.querySelector("#services").addEventListener("click",()=>{     
+      showProductsPage()
     })
+  }
+
+  function showProductsPage(){
+    document.body.innerHTML = "";
+    document.body.appendChild(navbar);
+    addNavBarEvents()
+    document.body.appendChild(productsView);
+    changeSelectedNavButton("app-btn")
   }
 
   function changeSelectedNavButton(newButton) {
@@ -41,6 +50,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       navbar.querySelector(".question-btn").addEventListener("click", () => {
         showAboutUsPage()
+      });
+
+      
+      navbar.querySelector(".app-btn").addEventListener("click", () => {
+        showProductsPage()
       });
   }
 
