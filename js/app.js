@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const navbar = document.createElement("nav-bar")
         const homeView = document.createElement("home-view");  
         document.body.appendChild(navbar);  
-        document.body.appendChild(homeView);  
+        document.body.appendChild(homeView);
+        navbar.querySelector(".home-btn").classList.add("navSelected")
     });
 });

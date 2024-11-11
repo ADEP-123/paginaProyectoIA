@@ -1,27 +1,33 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0%;
+  padding: 0%;
   box-sizing: border-box;
 }
 
+body{
+  background-color: #333;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+}
+
 body, html {
-  height: 100%;
   font-family: Arial, sans-serif;
 }
 
+/* ------ start-view ------ */
 start-view, home-view {
   display: block;
   text-align: center;
 }
-
 
 start-view {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Quartz-zhaseni.gif/460px-Quartz-zhaseni.gif') no-repeat center center/cover;
   color: white;
   text-align: center;
@@ -46,16 +52,18 @@ start-view {
   background-color: #0056b3;
 }
 
+/* ------ nav-bar ------ */
 
 nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   align-content: center;
-  background-color: #333;
   padding: 10px 0;
-  border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding-left: 2%;
+  height: 6%;
+  width: 100%;
 }
 
 nav button {
@@ -93,7 +101,106 @@ nav button:focus {
   color: #ff8c00;
 }
 
+.navSelected{
+  background-color: #555;
+}
+
 /* Animación al hacer hover */
 nav button:hover {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ------ Home view ------ */
+home-view{
+  height: 94%;
+}
+/* Contenedor principal */
+home-view .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+/* Barra superior con logo */
+home-view .header {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    max-height: 50px;
+    z-index: 2;
+}
+
+home-view .header img {
+  width: 150px; 
+  height: auto;
+  position: absolute; /* Permite el control preciso del z-index */
+  z-index: 3; /* Asegura que el logo quede sobre otros elementos */
+}
+
+/* Cuerpo de la página */
+home-view .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 50px); /* Ajustar el cuerpo para que no se solape con el header */
+    padding: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+/* Contenido de la misión y visión */
+home-view .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Limitar el ancho */
+    height: 100%;
+}
+
+/* Sección de Misión y Visión */
+home-view .section {
+    width: 45%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+home-view .section h2{
+  margin-bottom: 10%;
+  font-family: 'Roboto', sans-serif; 
+  font-size: 3em; 
+  letter-spacing: 3px; 
+  font-weight: bold; 
+  text-transform: uppercase; 
+  color: #fff; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  line-height: 1.3; 
+}
+
+home-view .section p{
+  text-align: justify;
+  font-size: 1.2em;
+}
+
+/* Línea decorativa entre misión y visión */
+.divider {
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(to bottom, 
+      transparent 0%, 
+      rgba(0, 0, 0, 0.5) 10%, 
+      transparent 20%, 
+      rgba(0, 0, 0, 0.5) 30%, 
+      transparent 40%, 
+      rgba(0, 0, 0, 0.5) 60%, 
+      transparent 70%, 
+      rgba(0, 0, 0, 0.5) 80%, 
+      transparent 90%);
+  background-size: 20px 20px; /* Repite el patrón verticalmente */
+  margin: 0 20px;
 }
