@@ -237,9 +237,10 @@ home-view .section p{
 
 /* ------ about-us ------ */
 about-us .totalContainer{
-  height: 94%;
   width: 100%;
-  padding: 5%;
+  padding: 2%;
+  padding-bottom: 0%;
+  height: 94%;
 }
 about-us img {
   float: right;
@@ -266,12 +267,13 @@ about-us p {
 about-us .zonaInforme {
   font-family: Arial, sans-serif;
   padding: 2%;
-  height: 80%;
+  height: 92%;
+  overflow-y: auto;
 }
 
 about-us .buttonDiv{
   width: 100%;
-  height: 20%;
+  height: 8%;
   display: flex;
   align-items: center;
   align-content: center;  
