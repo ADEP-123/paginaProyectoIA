@@ -1,19 +1,21 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body, html {
   height: 100%;
   font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
 }
 
-main-view {
+start-view, home-view {
+  display: block;
+  text-align: center;
+}
+
+
+start-view {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,10 +40,60 @@ main-view {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .start-btn:hover {
   background-color: #0056b3;
 }
-  
+
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  background-color: #333;
+  padding: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+nav button:hover {
+  background-color: #555;
+  transform: scale(1.1);
+}
+
+nav button:focus {
+  outline: none;
+  border: 2px solid #fff;
+}
+
+/* Estilo de iconos */
+.home-btn {
+  color: #1e90ff;
+}
+.question-btn {
+  color: #ff6347;
+}
+.app-btn {
+  color: #32cd32;
+}
+.phone-btn {
+  color: #ff8c00;
+}
+
+/* Animación al hacer hover */
+nav button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}

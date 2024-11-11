@@ -1,14 +1,19 @@
-import View from "./view.js";
-import Controller from "./controller.js";
+import './start-view.js';
+import './home-view.js';
+import './navbar.js';
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Crear una instancia de View y Controller
-  const view = new View();
-  const controller = new Controller(view);
-  
-  // Asignar el controlador a la vista
-  view.controller = controller;
 
-  // Agregar la vista al DOM
-  document.body.appendChild(view);
+    const startView = document.querySelector("start-view");
+
+
+    startView.addEventListener("startClicked", () => {
+
+        startView.remove();  
+
+        const navbar = document.createElement("nav-bar")
+        const homeView = document.createElement("home-view");  
+        document.body.appendChild(navbar);  
+        document.body.appendChild(homeView);  
+    });
 });
