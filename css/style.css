@@ -87,6 +87,30 @@ nav button:focus {
   border: 2px solid #fff;
 }
 
+/* Estilo del tooltip */
+nav button::after {
+  content: attr(data-title); /* Usa el valor de data-title como contenido del tooltip */
+  position: absolute;
+  bottom: 120%; /* Posiciona el tooltip encima del botón */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8); /* Color de fondo del tooltip */
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none; /* Evita que interfiera con el cursor */
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+/* Muestra el tooltip al hacer hover */
+nav button:hover::after {
+  opacity: 1;
+}
+
 /* Estilo de iconos */
 .home-btn {
   color: #1e90ff;
@@ -135,7 +159,7 @@ home-view .header {
 }
 
 home-view .header img {
-  width: 150px; 
+  width: 200px; 
   height: auto;
   position: absolute; /* Permite el control preciso del z-index */
   z-index: 3; /* Asegura que el logo quede sobre otros elementos */

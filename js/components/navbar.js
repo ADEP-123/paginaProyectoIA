@@ -10,10 +10,10 @@ class NavBar extends HTMLElement {
     render() {
         this.innerHTML = /*html*/`
             <nav>
-                <button class="home-btn">🏠</button>
-                <button class="question-btn">❓</button>
-                <button class="app-btn">📱</button>
-                <button class="phone-btn">📞</button>
+                <button class="home-btn" tittle="Home">🏠</button>
+                <button class="question-btn" tittle="Arcerca de">❓</button>
+                <button class="app-btn" tittle="App">📱</button>
+                <button class="phone-btn" tittle="Contacto">📞</button>
             </nav>
         `;
     }
