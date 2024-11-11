@@ -10,6 +10,12 @@ body{
   height: 100vh;
   width: 100vw;
 }
+h1, h2{
+  color: white;
+}
+p{
+  color: rgb(218, 215, 215);
+}
 
 body, html {
   font-family: Arial, sans-serif;
@@ -60,7 +66,7 @@ nav {
   align-items: center;
   align-content: center;
   padding: 10px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(201, 158, 19, 0.1);
   padding-left: 2%;
   height: 6%;
   width: 100%;
@@ -217,14 +223,85 @@ home-view .section p{
   width: 2px;
   background: linear-gradient(to bottom, 
       transparent 0%, 
-      rgba(0, 0, 0, 0.5) 10%, 
+      rgba(201, 158, 19,0.5) 10%, 
       transparent 20%, 
-      rgba(0, 0, 0, 0.5) 30%, 
+      rgba(201, 158, 19, 0.5) 30%, 
       transparent 40%, 
-      rgba(0, 0, 0, 0.5) 60%, 
+      rgba(201, 158, 19, 0.5) 60%, 
       transparent 70%, 
-      rgba(0, 0, 0, 0.5) 80%, 
+      rgba(201, 158, 19, 0.5) 80%, 
       transparent 90%);
   background-size: 20px 20px; /* Repite el patrón verticalmente */
   margin: 0 20px;
+}
+
+/* ------ about-us ------ */
+about-us .totalContainer{
+  height: 94%;
+  width: 100%;
+  padding: 5%;
+}
+about-us img {
+  float: right;
+  width: 300px; /* Ajusta el tamaño según tus necesidades */
+  height: auto;
+  margin: 0 0 10px 15px; /* Margen alrededor de la imagen */
+  border-radius: 8px; /* Esto le da bordes redondeados */
+}
+about-us h1{
+  text-align: center;
+  margin-bottom: 2%;
+  font-size: 2.5em;
+}
+
+about-us h2{
+  margin-bottom: 2%;
+  font-size: 2em;
+}
+
+about-us p {
+  font-size: 1.2em;
+}
+
+about-us .zonaInforme {
+  font-family: Arial, sans-serif;
+  padding: 2%;
+  height: 80%;
+}
+
+about-us .buttonDiv{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  align-content: center;  
+  justify-content: center;
+}
+
+/* Estilos del botón */
+about-us #services {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #a88512; 
+    border: none;
+    border-radius: 25px; 
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+}
+                
+/* Efecto hover */
+about-us #services:hover {
+    background-color: #c99e13; 
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+/* Efecto activo */
+about-us #services:active {
+    transform: translateY(1px); 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }

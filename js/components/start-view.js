@@ -9,7 +9,7 @@ class StartView extends HTMLElement {
 
     render() {
         this.innerHTML = /*html*/`
-            <h1 class="title">Detección de Minerales en Sección Delgada</h1>
+            <h1 class="title">GEO - IA</h1>
             <button class="start-btn">Empezar</button>
         `;
 
