@@ -1,6 +1,6 @@
-import './start-view.js';
-import './home-view.js';
-import './navbar.js';
+import './components/start-view.js';
+import './components/home-view.js';
+import './components/navbar.js';
 
 document.addEventListener("DOMContentLoaded", () => {
 
